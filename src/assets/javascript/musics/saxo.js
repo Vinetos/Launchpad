@@ -1,5 +1,6 @@
 const path = 'assets/sounds/saxo/';
 const format = '.mp3';
+// TODO: Make custom keyboard with custom keys count (don't depends of the azerty keyboard)
 const saxoKeys = {
     49: loadSound('lead-1'),
     50: loadSound('lead-2'),

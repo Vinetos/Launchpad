@@ -1,5 +1,5 @@
 // Set up component
-loadJS('ui.js', false);
+loadKeyboard('azerty');
 loadJS('keyboardholder.js', false);
 
 // Load the default music
