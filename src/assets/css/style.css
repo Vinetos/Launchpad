@@ -1,0 +1,25 @@
+/** {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    text-transform: none;
+}*/
+
+.button {
+    display: inline-block;
+    padding: 10px 2px;
+    margin: 4px;
+    width: 56px;
+    height: 40px;
+    font-size: 35px;
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 75ms ease-out;
+}
+
+.pressed {
+    transition: background-color 75ms cubic-bezier(0, 0, 0, 1.11);
+    background-color: #ffa000;
+}
