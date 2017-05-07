@@ -18,12 +18,5 @@ const saxoKeys = {
 };
 
 musicHolder = (keyCode) => {
-    let sound = saxoKeys[keyCode];
-    sound && sound.play();
+    playSound(saxoKeys[keyCode]);
 };
-
-function loadSound(name) {
-    return new Howl({
-        src: [path + name + format]
-    });
-}
