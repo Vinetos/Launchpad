@@ -1,4 +1,4 @@
-const path = 'assets/musics/saxo/';
+const path = 'assets/sounds/saxo/';
 const format = '.mp3';
 const saxoKeys = {
     49: loadSound('lead-1'),
