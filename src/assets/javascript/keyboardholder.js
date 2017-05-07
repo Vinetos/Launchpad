@@ -14,7 +14,7 @@ document.addEventListener('keydown', function (event) {
 
         // Update Style
         let clazz = e.className;
-        if (clazz.indexOf("pressed") == -1)
+        if (clazz.indexOf("pressed") == -1)//pressed isn't exist
             e.className += " pressed";
 
         // Fire event
@@ -36,8 +36,22 @@ document.addEventListener('keyup', function (event) {
 
         // Update style
         let clazz = e.className;
-        if (clazz.indexOf("pressed") != -1)
+        if (clazz.indexOf("pressed") != -1)//pressed exist
             e.className = "button";
 
     }
 });
+
+function keyPressed(element) {
+    // Update Style
+    if (element.className.indexOf("pressed") == -1) {//pressed isn't exist
+        element.className += " pressed";
+        setTimeout(function () { //100 ms after
+            element.className = "button";
+        }, 100);
+    } else {
+        element.className = "button";
+    }
+    // Fire event
+    musicHolder && musicHolder(element.id);
+}

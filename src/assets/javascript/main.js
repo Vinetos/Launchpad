@@ -28,6 +28,7 @@ function setup() {
                 li.appendChild(document.createTextNode(String.fromCharCode(value)));
                 li.setAttribute("class", "button");
                 li.setAttribute("id", value);
+                li.setAttribute("onclick", "keyPressed(this)");
                 ul.appendChild(li);
             }
         }
