@@ -6,8 +6,9 @@ const songs = [
 ];
 let isPlaying = false;
 let current = 0;
+let startTime = 0;
 
-musicHolder = (keyCode) => {
+musicHolder = (noteCode) => {
     if(!isPlaying) {
         // Launch the songs
         playSound(songs[0]);
@@ -17,9 +18,13 @@ musicHolder = (keyCode) => {
         songs[0].volume(1);
         songs[1].volume(0.25);
 
+        // Set start time
+        startTime = Date.now();
+
         // Fires when the song finishes playing.
         songs[1].on('end', function(){
             isPlaying = false;
+            startTime = 0;
         });
 
         isPlaying = true;

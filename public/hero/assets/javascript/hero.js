@@ -2,4 +2,4 @@
 loadKeyboard('azerty');
 
 // Load the default music
-loadJS('masonic.js');
+loadMusic('masonic');

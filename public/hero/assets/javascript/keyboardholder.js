@@ -1,6 +1,7 @@
 let keysDown = {};
 let customId = {};
 let musicHolder = undefined;
+let notes = undefined;
 
 // When a key is pressed
 document.addEventListener('keydown', function (event) {
