@@ -24,14 +24,14 @@ musicHolder = (keyCode) => {
 
         isPlaying = true;
     } else {
-        // Change the volume
-        songs[current].volume(0.25);
+        // Change the volume (from 1 to 0.25 in 1s)
+        songs[current].fade(1, 0.25, 1000);
         // Update the current song
         if(current === 1)
             current = 0;
         else
             current = 1;
-        // Change the volume
-        songs[current].volume(1);
+        // Change the volume (from 0.25 to 1 in 1s)
+        songs[current].fade(0.25, 1, 1000);
     }
 };
